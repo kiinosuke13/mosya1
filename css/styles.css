@@ -1,13 +1,14 @@
 @charset "UTF-8";
-
 body {
     margin:0;
+    box-sizing: border-box;
 }
 
 .container {
     width:800px;
     margin: 0 auto;
     text-align: center;
+    box-sizing: border-box;
 }
 
 a {
@@ -17,19 +18,11 @@ a {
 }
 
 h1 {
+    display: inline-block;
     font-size: 30px;
-    position: relative;
-    margin-bottom: 60px;
-}
-
-h1::after {
-    content: '';
-    position: absolute;
-    top: 50px;
-    right: 340px;
-    width: 120px;
-    height: 1px;
-    background-color: #000;
+    margin-bottom: 40px;
+    border-bottom: 1px solid #000;
+    margin-top: 0;
 }
 
 h2 {
@@ -46,7 +39,6 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 10px 250px;
-    background-color: #fff;
 }
 
 .logo {
@@ -55,6 +47,10 @@ header {
     padding: 5px 20px;
     font-size: 20px;
     font-weight: 600;
+}
+
+.sp-menu {
+    display: none;
 }
 
 .menus {
@@ -67,9 +63,18 @@ header {
 }
 
 /* main */
+.mainvisual {
+    width: 100%;
+    margin-bottom: 60px;
+}
+
 .mainvisual img {
     width: 100%;
     height: auto;
+}
+
+#about {
+    margin-bottom: 60px;
 }
 
 .author {
@@ -83,7 +88,6 @@ header {
 
 .author-introduce {
     text-align: left;
-
 }
 
 .face-photo img {
@@ -108,4 +112,162 @@ header {
 footer p{
     text-align: center;
     font-size: 12px;
+}
+
+@media screen and (max-width:767px) {
+    .container {
+        width: 100%;
+        text-align: center;
+        padding: 0 21px;
+    }
+
+    h1 {
+        font-size: 30px;
+        margin-bottom: 50px;
+    }
+
+    .text {
+        font-size: 14px;
+    }
+
+    .hidden {
+        display: none;
+    }
+
+    /* header */
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px;
+    }
+
+    .logo {
+        background-color: #000;
+        color: #fff;
+        padding: 5px 10px;
+        font-size: 16px;
+        font-weight: 600;
+    }
+
+    /* menu */
+    #hamburger {
+        width: 30px;
+        height: 30px;
+        position: relative;
+    }
+    
+    .pc-menu {
+        display: none;
+    }
+
+    .sp-menu {
+        display: block;
+    }
+
+    #mask {
+        background-color: rgb(212, 205, 205);
+        height: 600px;
+        width: 300px;
+        position: fixed;
+        top:75px;
+        right: 0;
+    }
+
+    
+    #hamburger > span:nth-child(1) {
+        content: '';
+        width: 30px;
+        height: 1px;
+        background-color: #000;
+        position: absolute;
+        top: 0;
+    }
+
+    #hamburger > span:nth-child(2) {
+        content: '';
+        width: 30px;
+        height: 1px;
+        background-color: #000;
+        position: absolute;
+        top: 10px;
+    }
+
+    #hamburger > span:nth-child(3){
+        content: '';
+        width: 30px;
+        height: 1px;
+        background-color: #000;
+        position: absolute;
+        top: 20px;
+    }
+
+    #hamburger.active > span:nth-child(1) {
+        content: '';
+        width: 30px;
+        height: 1px;
+        background-color: #000;
+        position: absolute;
+        transform: translateY(10px) rotate(-135deg);
+    }
+
+    #hamburger.active > span:nth-child(2) {
+        display: none;
+    }
+
+    #hamburger.active > span:nth-child(3){
+        content: '';
+        width: 30px;
+        height: 1px;
+        background-color: #000;
+        position: absolute;
+        transform: translateY(-10px) rotate(135deg);
+    }    
+
+    #modal {
+        display: fixed;
+        top: 30px;
+    }
+    /* main */
+    .mainvisual {
+        margin-bottom: 60px;
+    }
+
+    .about {
+        margin-bottom: 60px;
+    }
+
+    .author {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 0;
+    }
+
+    .face-photo {
+        margin-right: 0;
+    }
+
+    .kinds {
+        flex-direction: column;
+    }
+
+    .bicycle {
+        display: flex;
+        padding-bottom: 20px;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .bicycle-introduce > text {
+        text-align: center;
+    }
+
+    .bicycle-photo {
+        width: 100%;
+    }
+
+    .bicycle-photo img{
+        width: 100%;
+    }
 }
