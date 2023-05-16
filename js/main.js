@@ -14,7 +14,6 @@ hamburger.addEventListener('click',()=>{
     hamburger.classList.add('active');
 });
 
-
 modal.addEventListener('click',()=>{
     mask.classList.add('hidden');
     modal.classList.add('hidden');
