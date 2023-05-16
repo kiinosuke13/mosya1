@@ -1,0 +1,295 @@
+@charset "UTF-8";
+body {
+    margin:0;
+    box-sizing: border-box;
+}
+
+.container {
+    width:800px;
+    margin: 0 auto;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+    font-size: 14px;
+}
+
+h1 {
+    display: inline-block;
+    font-size: 30px;
+    margin-bottom: 40px;
+    border-bottom: 1px solid #000;
+    margin-top: 0;
+}
+
+h2 {
+    font-size: 16px;
+}
+
+.text {
+    font-size: 14px;
+}
+
+/* header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 250px;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    background-color: #fff;
+}
+
+.logo {
+    background-color: #000;
+    color: #fff;
+    padding: 5px 20px;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.sp-menu {
+    display: none;
+}
+
+.menus {
+    display: flex;
+    list-style: none;
+}
+
+.menu {
+    margin: 0 20px;
+}
+
+/* main */
+.mainvisual {
+    width: 100%;
+    margin-bottom: 60px;
+}
+
+.mainvisual img {
+    width: 100%;
+    height: auto;
+}
+
+#about {
+    margin-bottom: 60px;
+}
+
+.author {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.face-photo {
+    margin-right: 40px;
+}
+
+.author-introduce {
+    text-align: left;
+}
+
+.face-photo img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+
+.kinds {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 60px;
+}
+
+.bicycle-photo img{
+    width: 250px;
+    height: auto;
+}
+
+/* footer */
+footer p{
+    text-align: center;
+    font-size: 12px;
+}
+
+@media screen and (max-width:767px) {
+    a {
+        font-size: 20px;
+    }
+
+    .container {
+        width: 100%;
+        text-align: center;
+        padding: 0 21px;
+    }
+
+    h1 {
+        font-size: 30px;
+        margin-bottom: 50px;
+    }
+
+    .text {
+        font-size: 14px;
+    }
+
+    .hidden {
+        display: none;
+    }
+
+    /* header */
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px;
+    }
+
+    .logo {
+        background-color: #000;
+        color: #fff;
+        padding: 5px 10px;
+        font-size: 16px;
+        font-weight: 600;
+    }
+
+    /* menu */
+    #hamburger {
+        width: 30px;
+        height: 30px;
+        position: relative;
+    }
+    
+    .pc-menu {
+        display: none;
+    }
+
+    .sp-menu {
+        display: block;
+    }
+
+    #hamburger > span:nth-child(1) {
+        content: '';
+        width: 30px;
+        height: 1px;
+        background-color: #000;
+        position: absolute;
+        top: 0;
+    }
+
+    #hamburger > span:nth-child(2) {
+        content: '';
+        width: 30px;
+        height: 1px;
+        background-color: #000;
+        position: absolute;
+        top: 10px;
+    }
+
+    #hamburger > span:nth-child(3){
+        content: '';
+        width: 30px;
+        height: 1px;
+        background-color: #000;
+        position: absolute;
+        top: 20px;
+    }
+
+    #hamburger.active > span:nth-child(1) {
+        content: '';
+        width: 30px;
+        height: 1px;
+        background-color: #000;
+        position: absolute;
+        transform: translateY(10px) rotate(-135deg);
+    }
+
+    #hamburger.active > span:nth-child(2) {
+        display: none;
+    }
+
+    #hamburger.active > span:nth-child(3){
+        content: '';
+        width: 30px;
+        height: 1px;
+        background-color: #000;
+        position: absolute;
+        transform: translateY(-10px) rotate(135deg);
+    }    
+
+    #mask {
+        background-color: #fff;
+        color:black;
+        height: 80px;
+        width: 200px;
+        position: fixed;
+        top: 70px;
+        right: 0;
+    }
+
+    #modal {
+        position: fixed;
+        top: 30px;
+    }
+
+    .menus {
+        position: fixed;
+        top: 80px;
+        right: 20px;
+    }
+
+    .menu {
+        margin-bottom: 10px;
+        margin-right: 0;
+    }
+    /* main */
+    .mainvisual {
+        margin-bottom: 60px;
+        margin-top: 70px;
+    }
+
+    .about {
+        margin-bottom: 60px;
+    }
+
+    .author {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 0;
+    }
+
+    .face-photo {
+        margin-right: 0;
+    }
+
+    .kinds {
+        flex-direction: column;
+    }
+
+    .bicycle {
+        display: flex;
+        padding-bottom: 20px;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .bicycle-introduce > text {
+        text-align: center;
+    }
+
+    .bicycle-photo {
+        width: 100%;
+    }
+
+    .bicycle-photo img{
+        width: 100%;
+    }
+}
