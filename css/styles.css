@@ -84,7 +84,8 @@ header {
 
 .author {
     display: flex;
-    padding: 0 130px;
+    align-items: center;
+    justify-content: center;
 }
 
 .face-photo {
