@@ -13,3 +13,10 @@ hamburger.addEventListener('click',()=>{
     modal.classList.remove('hidden');
     hamburger.classList.add('active');
 });
+
+
+modal.addEventListener('click',()=>{
+    mask.classList.add('hidden');
+    modal.classList.add('hidden');
+    hamburger.classList.remove('active');
+});
